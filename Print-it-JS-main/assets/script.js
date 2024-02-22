@@ -43,3 +43,10 @@ mooveOnLeft.addEventListener("click", () => {
 	dynamicBullets(i);
 })
 
+// Créez et ajoutez les éléments .dot enfants en fonction de la longueur du tableau slides
+for (let j = 0; j < slides.length; j++) {
+	const dot = document.createElement("div");
+	dot.classList.add("dot");
+	dotsContainer.appendChild(dot);
+}
+
