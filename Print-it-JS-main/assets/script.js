@@ -33,7 +33,7 @@ mooveOnRight.addEventListener("click", () => {
 	document.querySelector("#banner p").innerHTML = img.tagLine
 	dynamicBullets(i);
 })
-
+// fonction de retour à la premiere image quand on arrive à la fin du slide
 function afficherImageSuivante() {
 	if (i === slides.length - 1) {
 		i = 0;
@@ -50,7 +50,7 @@ mooveOnLeft.addEventListener("click", () => {
 	document.querySelector("#banner p").innerHTML = img.tagLine
 	dynamicBullets(i);
 })
-
+// fonction de retour à la dernière image quand on est au début du slide
 function afficherImagePrecedente() {
 	if (i === 0) {
 		i = slides.length - 1;
