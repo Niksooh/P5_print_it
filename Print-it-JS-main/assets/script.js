@@ -27,7 +27,7 @@ let dotsContainer = document.querySelector(".dots");
 
 // Mouvement vers la droite aprés le click sur la flêche
 mooveOnRight.addEventListener("click", () => {
-	afficherImageSuivante();
+	i = (i+1)%slides.l
 	let img = slides[i]
 	document.querySelector(".banner-img").src = "./assets/images/slideshow/" + img.image
 	document.querySelector("#banner p").innerHTML = img.tagLine
@@ -45,7 +45,7 @@ function afficherImageSuivante() {
 
 // Mouvement vers la droite aprés le click sur la flêche
 mooveOnLeft.addEventListener("click", () => {
-	afficherImagePrecedente();
+	i = (i-1 + slides.length) %slides.length
 	let img = slides[i]
 	document.querySelector(".banner-img").src = "./assets/images/slideshow/" + img.image
 	document.querySelector("#banner p").innerHTML = img.tagLine
