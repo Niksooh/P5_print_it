@@ -20,16 +20,14 @@ const slides = [
 
 // Variable
 let i = 0
-let img
-let myBanner = document.getElementById("banner")
-let mooveOnRight = document.getElementById("right")
-let mooveOnLeft = document.getElementById("left")
-let dotsContainer = document.querySelector(".dots");
+const mooveOnRight = document.getElementById("right")
+const mooveOnLeft = document.getElementById("left")
+const dotsContainer = document.querySelector(".dots");
 
 // Mouvement vers la droite après le click sur la flèche
 mooveOnRight.addEventListener("click", () => {
     i = (i + 1) % slides.length;
-    img = slides[i]; // Affectation de la valeur de slides[i] à la variable img
+    let img = slides[i]; // Affectation de la valeur de slides[i] à la variable img
     document.querySelector(".banner-img").src = "./assets/images/slideshow/" + img.image;
     document.querySelector("#banner p").innerHTML = img.tagLine;
     dynamicBullets(i);
@@ -47,7 +45,7 @@ function afficherImageSuivante() {
 // Mouvement vers la gauche après le click sur la flèche
 mooveOnLeft.addEventListener("click", () => {
     i = (i - 1 + slides.length) % slides.length;
-    img = slides[i]; // Affectation de la valeur de slides[i] à la variable img
+    let img = slides[i]; // Affectation de la valeur de slides[i] à la variable img
     document.querySelector(".banner-img").src = "./assets/images/slideshow/" + img.image;
     document.querySelector("#banner p").innerHTML = img.tagLine;
     dynamicBullets(i);
